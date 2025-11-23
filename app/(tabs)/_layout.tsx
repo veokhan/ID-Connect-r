@@ -72,7 +72,7 @@ export default function TabLayout() {
 }*/
 
 import { Tabs } from 'expo-router';
-import { Search, MessageCircle, Globe, Users, User } from 'lucide-react-native';
+import { Search, MessageCircle, Users, User } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
@@ -111,16 +111,6 @@ export default function TabLayout() {
           title: 'Chats',
           tabBarIcon: ({ color }) => (
             <MessageCircle color={color} size={26} />
-          ),
-        }}
-      />
-
-      <Tabs.Screen
-        name="global-chat-room"
-        options={{
-          title: 'Global Chat',
-          tabBarIcon: ({ color }) => (
-            <Globe color={color} size={26} />
           ),
         }}
       />
