@@ -172,10 +172,6 @@ export default function ChatsScreen() {
         <TouchableOpacity style={styles.headerButton}>
           <ArrowLeft color="#1A1A1A" size={24} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Chat</Text>
-        <TouchableOpacity style={styles.headerButton}>
-          <Search color="#1A1A1A" size={24} />
-        </TouchableOpacity>
       </View>
 
       {/* Tabs */}
