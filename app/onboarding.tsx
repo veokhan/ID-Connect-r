@@ -65,7 +65,7 @@ export default function OnboardingScreen() {
             <View style={styles.featuresContainer}>
               <View style={styles.feature}>
                 <View style={styles.checkContainer}>
-                  <Check color="#1313ec" size={16} strokeWidth={3} />
+                  <Check color="#3F51B5" size={16} strokeWidth={3} />
                 </View>
                 <View style={styles.featureTextContainer}>
                   <Text style={styles.featureText}>
@@ -80,7 +80,7 @@ export default function OnboardingScreen() {
 
               <View style={styles.feature}>
                 <View style={styles.checkContainer}>
-                  <Check color="#1313ec" size={16} strokeWidth={3} />
+                  <Check color="#3F51B5" size={16} strokeWidth={3} />
                 </View>
                 <View style={styles.featureTextContainer}>
                   <Text style={styles.featureText}>
@@ -97,7 +97,7 @@ export default function OnboardingScreen() {
 
               <View style={styles.feature}>
                 <View style={styles.checkContainer}>
-                  <Check color="#1313ec" size={16} strokeWidth={3} />
+                  <Check color="#3F51B5" size={16} strokeWidth={3} />
                 </View>
                 <View style={styles.featureTextContainer}>
                   <Text style={styles.featureText}>
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   title: {
-    fontFamily: 'Inter-ExtraBold',
+    fontFamily: 'Inter-Bold',
     color: '#0f172a',
     textAlign: 'center',
     marginBottom: 16,
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: '#1313ec20',
+    backgroundColor: '#3F51B520',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 12,
@@ -242,17 +242,17 @@ const styles = StyleSheet.create({
     color: '#475569',
   },
   noteContainer: {
-    backgroundColor: '#1313ec1a',
+    backgroundColor: '#3F51B51a',
     borderRadius: 12,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#1313ec33',
+    borderColor: '#3F51B533',
   },
   noteText: {
     fontSize: 14,
     lineHeight: 20,
     fontFamily: 'Inter-Medium',
-    color: '#1313ec',
+    color: '#3F51B5',
   },
   buttonSafeArea: {
     backgroundColor: '#f6f6f8',
@@ -271,11 +271,11 @@ const styles = StyleSheet.create({
     paddingBottom: 32,
   },
   startButton: {
-    backgroundColor: '#1313ec',
+    backgroundColor: '#3F51B5',
     borderRadius: 12,
     paddingVertical: 16,
     alignItems: 'center',
-    shadowColor: '#1313ec',
+    shadowColor: '#3F51B5',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
