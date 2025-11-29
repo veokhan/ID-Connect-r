@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "EXPO_NO_TELEMETRY=1 EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0 expo start --web --port 5000",
+    "dev": "cross-env EXPO_NO_TELEMETRY=1 EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0 expo start --web --port 5000",
     "build:web": "expo export --platform web",
     "lint": "expo lint",
     "typecheck": "tsc --noEmit"
@@ -13,6 +13,7 @@
     "@expo-google-fonts/inter": "^0.2.3",
     "@expo/vector-icons": "^15.0.2",
     "@lucide/lab": "^0.1.2",
+    "@react-native-async-storage/async-storage": "^2.2.0",
     "@react-native-picker/picker": "^2.11.4",
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
@@ -25,6 +26,7 @@
     "expo-image-picker": "^17.0.0",
     "expo-linear-gradient": "~15.0.7",
     "expo-linking": "~8.0.8",
+    "expo-location": "^19.0.7",
     "expo-router": "~6.0.8",
     "expo-splash-screen": "~31.0.10",
     "expo-status-bar": "~3.0.8",
@@ -47,6 +49,8 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.1.10",
+    "baseline-browser-mapping": "^2.8.32",
+    "cross-env": "^10.1.0",
     "typescript": "~5.9.2"
   }
 }
