@@ -36,10 +36,7 @@ export default function CompleteProfileScreen() {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
-          <ArrowLeft color="#1A1A1A" size={24} />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Complete Profile</Text>
+        <Text style={styles.headerTitle}>My Profile</Text>
         <View style={styles.headerSpacer} />
       </View>
 
@@ -47,7 +44,7 @@ export default function CompleteProfileScreen() {
         style={styles.keyboardView}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
-        <ScrollView 
+        <ScrollView
           style={styles.content}
           contentContainerStyle={styles.contentContainer}
           showsVerticalScrollIndicator={false}
@@ -71,9 +68,9 @@ export default function CompleteProfileScreen() {
               <View style={styles.formField}>
                 <Text style={styles.fieldLabel}>Name</Text>
                 <TextInput
-                  style={styles.fieldInput}
+                  style={[styles.fieldInput, styles.readOnlyInput]}
                   value={profileData.name}
-                  onChangeText={(value) => updateField('name', value)}
+                  editable={false}
                   placeholder="Your name"
                   placeholderTextColor="#999999"
                 />
@@ -81,9 +78,9 @@ export default function CompleteProfileScreen() {
               <View style={styles.formField}>
                 <Text style={styles.fieldLabel}>Handle</Text>
                 <TextInput
-                  style={styles.fieldInput}
+                  style={[styles.fieldInput, styles.readOnlyInput]}
                   value={profileData.handle}
-                  onChangeText={(value) => updateField('handle', value)}
+                  editable={false}
                   placeholder="@username"
                   placeholderTextColor="#999999"
                 />
@@ -95,9 +92,9 @@ export default function CompleteProfileScreen() {
               <View style={styles.formField}>
                 <Text style={styles.fieldLabel}>Age</Text>
                 <TextInput
-                  style={styles.fieldInput}
+                  style={[styles.fieldInput, styles.readOnlyInput]}
                   value={profileData.age}
-                  onChangeText={(value) => updateField('age', value)}
+                  editable={false}
                   placeholder="25"
                   placeholderTextColor="#999999"
                   keyboardType="numeric"
@@ -105,12 +102,11 @@ export default function CompleteProfileScreen() {
               </View>
               <View style={styles.formFieldDropdown}>
                 <Text style={styles.fieldLabel}>Gender</Text>
-                <TouchableOpacity 
+                <TouchableOpacity
                   style={styles.dropdownField}
-                  onPress={() => setShowGenderDropdown(!showGenderDropdown)}
+                  disabled={true}
                 >
-                  <Text style={styles.dropdownText}>{profileData.gender}</Text>
-                  <ChevronDown color="#666666" size={20} />
+                  <Text style={[styles.dropdownText, { color: '#999999' }]}>{profileData.gender}</Text>
                 </TouchableOpacity>
                 {showGenderDropdown && (
                   <View style={styles.dropdownMenu}>
@@ -141,9 +137,9 @@ export default function CompleteProfileScreen() {
               <View style={styles.formField}>
                 <Text style={styles.fieldLabel}>City</Text>
                 <TextInput
-                  style={styles.fieldInput}
+                  style={[styles.fieldInput, styles.readOnlyInput]}
                   value={profileData.city}
-                  onChangeText={(value) => updateField('city', value)}
+                  editable={false}
                   placeholder="Your city"
                   placeholderTextColor="#999999"
                 />
@@ -151,9 +147,9 @@ export default function CompleteProfileScreen() {
               <View style={styles.formField}>
                 <Text style={styles.fieldLabel}>Country</Text>
                 <TextInput
-                  style={styles.fieldInput}
+                  style={[styles.fieldInput, styles.readOnlyInput]}
                   value={profileData.country}
-                  onChangeText={(value) => updateField('country', value)}
+                  editable={false}
                   placeholder="Your country"
                   placeholderTextColor="#999999"
                 />
@@ -226,7 +222,7 @@ export default function CompleteProfileScreen() {
         {/* Continue Button */}
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.continueButton} onPress={handleContinue}>
-            <Text style={styles.continueButtonText}>Continue</Text>
+            <Text style={styles.continueButtonText}>Save</Text>
           </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
@@ -240,22 +236,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F5F5',
   },
   header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
     paddingHorizontal: 16,
     paddingVertical: 12,
-    backgroundColor: '#F5F5F5',
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: '#ece9e9ff',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   headerTitle: {
-    fontSize: 18,
-    fontFamily: 'Inter-SemiBold',
+    fontSize: 20,
+    fontFamily: 'Inter-Bold',
     color: '#1A1A1A',
   },
   headerSpacer: {
@@ -454,5 +444,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: 'Inter-SemiBold',
     color: '#FFFFFF',
+  },
+  readOnlyInput: {
+    color: '#999999',
   },
 });

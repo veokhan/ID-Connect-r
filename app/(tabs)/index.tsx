@@ -22,7 +22,7 @@ export default function ExploreScreen() {
           style={styles.filterButton}
           onPress={() => router.push('/search-filter')}
         >
-          <Filter color="#0000FF" size={24} />
+          <Filter color="#3F51B5" size={24} />
         </TouchableOpacity>
       </View>
 
@@ -55,16 +55,21 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 24,
-    paddingVertical: 16,
+    justifyContent: 'flex-end',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
     borderBottomWidth: 1,
     borderBottomColor: '#F0F0F0',
+    position: 'relative',
   },
   headerTitle: {
-    fontSize: 24,
+    fontSize: 20,
     fontFamily: 'Inter-Bold',
     color: '#1A1A1A',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    textAlign: 'center',
   },
   filterButton: {
     padding: 4,

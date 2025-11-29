@@ -156,7 +156,7 @@ export default function FriendsScreen() {
             friendRequests.map((request) => (
               <View key={request.id} style={styles.requestItem}>
                 <Image source={{ uri: request.profilePicUrl }} style={styles.avatar} />
-                
+
                 <View style={styles.requestContent}>
                   <Text style={styles.userName}>{request.userName}</Text>
                   <Text style={styles.handle}>{request.handle}</Text>
@@ -231,13 +231,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   header: {
-    paddingHorizontal: 24,
-    paddingVertical: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
     borderBottomWidth: 1,
     borderBottomColor: '#F0F0F0',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   headerTitle: {
-    fontSize: 24,
+    fontSize: 20,
     fontFamily: 'Inter-Bold',
     color: '#1A1A1A',
   },
